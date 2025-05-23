@@ -21,10 +21,30 @@ Student *create_student_database(int initial_capacity) {
     return database;
 }
 
-void print_student(Student *database, int count) {
+void add_student(Student **database, int *capacity, int *count, char *name, int id, float gpa) {
+    if (*count == *capacity) {
+        *capacity = *capacity * 2;
+        Student *temp = (Student*)realloc(*database, *capacity * sizeof(Student));
+
+        if (temp == NULL) {
+            printf("memory reallocation failed!\n");
+            return;
+        }
+        *database = temp;
+    }
+
+    strncpy((*database)[*count].name, name, 49);
+    (*database)[*count].name[49] = '\0';
+    (*database)[*count].id = id;
+    (*database)[*count].gpa = gpa;
+    (*count)++;
+}
+
+void print_students(Student *database, int count) {
     for (int i = 0; i < count; i++) {
         printf("Name: %s\n", database[i].name);
         printf("ID: %d\n", database[i].id);
-        printf("GPA: %f\n", database[i].gpa);
+        printf("GPA: %.2f\n", database[i].gpa);
+        printf("\n");
     }
 }
