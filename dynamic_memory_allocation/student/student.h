@@ -13,4 +13,6 @@ void add_student(Student **database, int *capacity, int *count, char *name, int 
 
 void print_students(Student *database, int count);
 
+void free_student_database(Student *database);
+
 #endif // !STUDENT_H
