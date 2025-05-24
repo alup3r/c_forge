@@ -145,8 +145,8 @@ Create a program that manages student records dynamically:
 
 2. Implement these functions:
    - `Student* create_student_database(int initial_capacity)`
-   - `void add_student(Student** database, int* capacity, int* count, char*
-     name, int id, float gpa)`
+   - `void add_student(Student** database, int* capacity, int* count, char*`
+     `name, int id, float gpa)`
    - `void print_students(Student* database, int count)`
    - `void free_student_database(Student* database)`
 
@@ -162,12 +162,13 @@ and manipulation of data, which is essential for dynamic data structures.
 
 ### Key Concepts:
 
-- **Declaration**: Pointers are declared with an asterisk (*): `int *ptr;`
+- **Declaration**: Pointers are declared with an asterisk ( * ): `int *ptr;`
 - **Address Operator**: The `&` operator gets a variable's memory address
-- **Dereferencing**: The `*` operator accesses the value at a pointer's address
+- **Dereferencing**: The ` * ` operator accesses the value at a pointer's address
 - **Pointer Arithmetic**: Adding/subtracting integers to navigate memory
-- **Arrow Operator**: The `->` operator accesses structure members via pointers
+- **Arrow Operator**: The `->`  operator accesses structure members via pointers
 - **Memory Leaks**: Occur when allocated memory is not freed
+- test * 
 
 ### Code Demonstration:
 

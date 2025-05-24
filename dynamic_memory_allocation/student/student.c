@@ -14,14 +14,14 @@ Student *create_student_database(int initial_capacity) {
     return database;
 }
 
-void add_student(Student **database, int *capacity, int *count, char *name, int id, float gpa) {
+int add_student(Student **database, int *capacity, int *count, char *name, int id, float gpa) {
     if (*count == *capacity) {
         *capacity = *capacity * 2;
         Student *temp = (Student*)realloc(*database, *capacity * sizeof(Student));
 
         if (temp == NULL) {
-            printf("memory reallocation failed!\n");
-            return;
+            fprintf(stderr, "memory reallocation failed!\n");
+            return 1;
         }
         *database = temp;
     }
@@ -31,9 +31,11 @@ void add_student(Student **database, int *capacity, int *count, char *name, int 
     (*database)[*count].id = id;
     (*database)[*count].gpa = gpa;
     (*count)++;
+
+    return 0;
 }
 
-void print_students(Student *database, int count) {
+void print_students(const Student *database, int count) {
     for (int i = 0; i < count; i++) {
         printf("Name: %s\n", database[i].name);
         printf("ID: %d\n", database[i].id);

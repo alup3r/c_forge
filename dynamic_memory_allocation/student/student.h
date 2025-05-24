@@ -9,9 +9,9 @@ typedef struct {
 
 Student *create_student_database(int initial_capacity);
 
-void add_student(Student **database, int *capacity, int *count, char *name, int id, float gpa);
+int add_student(Student **database, int *capacity, int *count, char *name, int id, float gpa);
 
-void print_students(Student *database, int count);
+void print_students(const Student *database, int count);
 
 void free_student_database(Student *database);
 
