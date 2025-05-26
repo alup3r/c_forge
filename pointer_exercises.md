@@ -20,30 +20,30 @@
 
 ### String manipulation with pointers
 
-- [ ] Write a function that takes a string (char array) pointer and converts
+- [X] Write a function that takes a string (char array) pointer and converts
       all lowercase letters to uppercase using pointer manipulation.
 
 ### Dynamic memory allocation
 
-- [ ] Write a program that dynamically allocates memory for an array of
+- [X] Write a program that dynamically allocates memory for an array of
       integers (size input by the user), fills it with values, prints the
       values, and then frees the memory.
 
 ### Function returning a pointer
 
-- [ ] Implement a function that returns a pointer to the largest element in an
+- [X] Implement a function that returns a pointer to the largest element in an
       integer array.
 
 ## Advanced Level
 
 ### Pointer to pointer
 
-- [ ] Write a program that uses a pointer to a pointer (double pointer) to
+- [X] Write a program that uses a pointer to a pointer (double pointer) to
       modify a variable's value.
 
 ### Linked list node creation
 
-- [ ] Implement a basic singly linked list node struct and write a function to
+- [X] Implement a basic singly linked list node struct and write a function to
       create a new node with a given integer value using pointers.
 
 ### Pointer to a function
